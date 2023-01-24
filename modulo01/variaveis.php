@@ -1,51 +1,63 @@
 <?php
-/*
-$nome = 'João';
-$sobrenome = 'Silva';
+
+// variaveis
+
+$nome = 'renan';
+$sobrenome = 'silva';
+
 print $nome . ' ' . $sobrenome;
-$nome_completo = "{$nome} {$sobrenome}";
-print $nome_completo;
-print "{$nome} \" {$sobrenome}";
-$a = 5;
-$b = '4.5';
-var_dump($a * $b);
-*/
 
-/*
-$a = 5;
-$b = &$a;
+$nomeCompleto = "x{$nome}x x{$sobrenome}x "; 
 
-$a = 10;
+print $nomeCompleto;
 
-var_dump($a);
-var_dump($b);
+$a = 5 ;
+$b = 4.5;
+$c = true;
+$d = 'a  ';
 
-*/
+$e = '2';
 
-/*
-$nome = '0';
+// numero em string em conta matematica, vira number
 
-if (!empty($nome))
-{
-    print 'nome tem conteudo';
+var_dump($a * $e, $b, $c, $d);
+
+// passagem por referencia
+
+$f = 10;
+$g = &$f; // & na frente da variavel, ela passar a ser por referencia, 
+		  // por isso devolve o valor 5 nas duas
+
+$f = 5;
+
+var_dump($f);
+var_dump($g);
+
+// =============== Boolean
+
+// Sempre ira retornar FALSE
+// ""      = string vazia
+// 0       = zero
+// 0.0     = zero ponto zero
+// "0"     = zero em string
+// null
+// false
+// array() = array vazia
+
+if(empty($f)){
+	// ira entrar se for vazio
 }
-*/
 
-/*
-$lista = [ 'cor' => 'vermelho', 'peso' => 20 ];
+// =============== Array
+
+$lista = ['vermelho', 'azul', 'preto'];
 
 var_dump($lista);
 
-*/
+// =============== Objeto
 
-$pessoa1 = new stdClass;
-$pessoa1->nome = 'Pedro';
-$pessoa1->altura = 1.8;
+$objeto = new stdClass; // cria um objeto
+$objeto->nome = 'renan';
+$objeto->altura = 1.8;
 
-$pessoa2 = $pessoa1;
-
-$pessoa2->nome = 'Joana';
-
-var_dump($pessoa1);
-print '<br>';
-var_dump($pessoa2);
+var_dump($objeto);
